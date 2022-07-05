@@ -2,8 +2,8 @@ const currentday = new Date()
 const seconds = currentday.getSeconds()
 const minutes = currentday.getMinutes()
 const minute = `0${minutes}`
-const hour = currentday.getHours()
-const amOrPm = 'AM'
+let hour = currentday.getHours()
+let amOrPm = 'AM'
 
 //set interval for the clock functions to reload
 setInterval(setClock, 1000)

@@ -1,14 +1,16 @@
+/* box sizing */
 * {
     box-sizing: border-box;
     font-family: 'source sans pro', 'mancondo', 'Gotham Rounded', sans-serif;
 }
 
+/* background color and hidden overflow */
 body {
     background: linear-gradient(to right, hsl(200, 100%, 50%), hsl(175, 100%, 50%));
     min-height: 100vh;
     overflow: hidden;
 }
-
+/* base clock styling */
 .clock {
     width: 300px;
     height: 300px;
@@ -18,48 +20,7 @@ body {
     position: relative;
     margin: auto;
 }
-ul{
-    width: fit-content;
-    margin: 30px auto;
-    border: 1px solid red;
-    background-color: black;
-    padding: 0;
-}
-li {
-    height: 100px;
-    width: 100px;
-    display: inline-block;
-    color: white;
-    list-style: none;
-    text-transform: uppercase;
-    text-shadow: white;
-    font-size: 80px;
-    font-weight: 900;
-    font-family: 'Times New Roman', Times, serif;
-}
 
-li:last-child{
-    font-size: 20px;
-    display: inline-block;
-    height: fit-content;
-    width: fit-content;
-}
-ul:nth-child(2) {
-    text-align: center;
-}
-
-.fancy {
-    display: inline-block;
-    width: fit-content;
-    position: fixed;
-    bottom: 40px;
-    color: rgba(255, 255, 255, .8);
-    text-shadow: 1px 2px black ;
-
-}
-.hidden {
-    visibility: hidden;
-}
 .clock .number {
     --rotation: 0;
     position: absolute;
@@ -125,3 +86,47 @@ ul:nth-child(2) {
     height: 35%;
     background-color: black;
 }
+
+/* digital clock styling */
+ul{
+    width: fit-content;
+    margin: 30px auto;
+    border: 1px solid red;
+    background-color: black;
+    padding: 0;
+}
+li {
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    color: white;
+    list-style: none;
+    text-transform: uppercase;
+    text-shadow: white;
+    font-size: 80px;
+    font-weight: 900;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+li:last-child{
+    font-size: 20px;
+    display: inline-block;
+    height: fit-content;
+    width: fit-content;
+}
+ul:nth-child(2) {
+    text-align: center;
+}
+
+/* styling for name */
+.fancy {
+    display: inline-block;
+    width: fit-content;
+    position: fixed;
+    bottom: 40px;
+    color: rgba(255, 255, 255, .8);
+    text-shadow: 1px 2px black ;
+
+}
+
+
