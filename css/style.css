@@ -23,6 +23,7 @@ ul{
     margin: 30px auto;
     border: 1px solid red;
     background-color: black;
+    padding: 0;
 }
 li {
     height: 100px;

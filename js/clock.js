@@ -1,7 +1,7 @@
 setInterval(setClock, 1000)
 setInterval(digitHour, 360000)
 setInterval(digitminute, 60000)
-setInterval(blink, 1000)
+setInterval(blink, 500)
 
 
 const secondHand = document.querySelector('[data-second-hand]')
@@ -13,7 +13,7 @@ function setClock(){
     const day = new Date()
     const secondRatio = day.getSeconds() / 60
     const minuteRatio = (secondRatio + day.getMinutes()) / 60
-    const hourRatio = (secondRatio + day.getHours()) / 12
+    const hourRatio = (minuteRatio + day.getHours()) / 12
     setRotation(secondHand, secondRatio)
     setRotation(minuteHand, minuteRatio)
     setRotation(hourHand, hourRatio)
@@ -30,7 +30,7 @@ function blink(){
 
 function digitminute() {
     currentday = new Date()
-    document.getElementById('hour').innerText = currentday.getHours()
+    document.getElementById('minute').innerText = currentday.getMinutes()
 }
 
 function setRotation(element, rotationRatio) {
