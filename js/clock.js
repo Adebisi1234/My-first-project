@@ -1,6 +1,7 @@
 setInterval(setClock, 1000)
 setInterval(digitHour, 360000)
 setInterval(digitminute, 60000)
+setInterval(blink, 1000)
 
 
 const secondHand = document.querySelector('[data-second-hand]')
@@ -23,6 +24,10 @@ function digitHour() {
     document.getElementById('hour').innerText = currentday.getHours()
 }
 
+function blink(){
+    document.querySelector('#colon').classList.toggle('hidden')
+}
+
 function digitminute() {
     currentday = new Date()
     document.getElementById('hour').innerText = currentday.getHours()
@@ -35,4 +40,5 @@ function setRotation(element, rotationRatio) {
 setClock()
 digitHour()
 digitminute()
+blink()
 
