@@ -1,3 +1,9 @@
+const currentday = new Date()
+const seconds = currentday.getSeconds()
+const minutes = currentday.getMinutes()
+const hour = currentday.getHours()
+const amOrPm = 'AM' 
+
 setInterval(setClock, 1000)
 setInterval(digitHour, 360000)
 setInterval(digitminute, 60000)
@@ -20,11 +26,12 @@ function setClock(){
 }
 
 function digitHour() {
-    let currentday = new Date()
-    if(currentday.getHours() > 12){
-        currentday.getHours() = currentday.getHours() % 12
+    if(hour > 12){
+        hour = hour % 12
+        amOrPm = 'PM'
     }
-    document.getElementById('hour').innerText = currentday.getHours()
+    document.getElementById('hour').innerText = hour
+    document.getElementById('amOrPm').innerText = amOrPm
 }
 
 function blink(){
@@ -32,8 +39,10 @@ function blink(){
 }
 
 function digitminute() {
-    currentday = new Date()
-    document.getElementById('minute').innerText = currentday.getMinutes()
+    if(minutes < 10){
+        minutes = '0' + minutes
+    }
+    document.getElementById('minute').innerText = minutes
 }
 
 function setRotation(element, rotationRatio) {

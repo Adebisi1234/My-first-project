@@ -37,6 +37,13 @@ li {
     font-weight: 900;
     font-family: 'Times New Roman', Times, serif;
 }
+
+li:last-child{
+    font-size: 20px;
+    display: inline-block;
+    height: fit-content;
+    width: fit-content;
+}
 ul:nth-child(2) {
     text-align: center;
 }
