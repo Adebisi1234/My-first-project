@@ -1,2 +1,2 @@
 # My-first-project
-A Analog Clock fully functional
+A digital and analog clock with a cool slide in of my name 
