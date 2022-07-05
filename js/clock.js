@@ -5,6 +5,7 @@ const minute = `0${minutes}`
 const hour = currentday.getHours()
 const amOrPm = 'AM'
 
+//set interval for the clock functions to reload
 setInterval(setClock, 1000)
 setInterval(digitHour, 360000)
 setInterval(digitminute, 60000)
@@ -15,6 +16,7 @@ const secondHand = document.querySelector('[data-second-hand]')
 const minuteHand = document.querySelector('[data-minute-hand]')
 const hourHand = document.querySelector('[data-hour-hand]')
 
+//function for analog clock
 function setClock(){
 
     const day = new Date()
@@ -26,6 +28,7 @@ function setClock(){
     setRotation(hourHand, hourRatio)
 }
 
+//fuction for inputing the hour and am/pm into the dom
 function digitHour() {
     if(hour > 12){
         hour = hour % 12
@@ -35,10 +38,12 @@ function digitHour() {
     document.getElementById('amOrPm').innerText = amOrPm
 }
 
+//function for the blinking colon
 function blink(){
     document.querySelector('#colon').classList.toggle('hidden')
 }
 
+//fuction for inputing the minute into the dom
 function digitminute() {
     if(minutes < 10){
         document.getElementById('minute').innerText = minute
