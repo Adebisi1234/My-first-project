@@ -21,6 +21,9 @@ function setClock(){
 
 function digitHour() {
     let currentday = new Date()
+    if(currentday.getHours() > 12){
+        currentday.getHours() = currentday.getHours() % 12
+    }
     document.getElementById('hour').innerText = currentday.getHours()
 }
 
