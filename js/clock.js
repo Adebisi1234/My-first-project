@@ -1,8 +1,9 @@
 const currentday = new Date()
 const seconds = currentday.getSeconds()
 const minutes = currentday.getMinutes()
+const minute = `0${minutes}`
 const hour = currentday.getHours()
-const amOrPm = 'AM' 
+const amOrPm = 'AM'
 
 setInterval(setClock, 1000)
 setInterval(digitHour, 360000)
@@ -40,9 +41,11 @@ function blink(){
 
 function digitminute() {
     if(minutes < 10){
-        minutes = '0' + minutes
+        document.getElementById('minute').innerText = minute
+    }else {
+        document.getElementById('minute').innerText = minutes
     }
-    document.getElementById('minute').innerText = minutes
+    
 }
 
 function setRotation(element, rotationRatio) {
